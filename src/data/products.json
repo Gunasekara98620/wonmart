@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Shin Ramen (Original)",
+    "shortDescription": "Spicy Korean instant noodles with authentic flavor",
+    "longDescription": "Experience the authentic taste of Korea with Shin Ramen Original. This iconic instant noodle features a rich, spicy broth that has made it a favorite worldwide. Made with premium ingredients and the perfect balance of spices, it delivers an unforgettable culinary adventure in every bowl.",
+    "image": "/img/shin-ramen-original.jpg",
+    "price": "Rs. 150"
+  },
+  {
+    "id": 2,
+    "name": "Shin Ramen (Neoguri)",
+    "shortDescription": "Extra spicy seafood flavored instant noodles",
+    "longDescription": "Shin Ramen Neoguri takes the heat to the next level with its fiery seafood flavor. Packed with dried anchovies, kelp, and premium spices, this extra-spicy variety offers an intense umami experience that will satisfy your cravings for bold, oceanic flavors.",
+    "image": "/img/shin-ramen-neoguri.jpg",
+    "price": "Rs. 160"
+  },
+  {
+    "id": 3,
+    "name": "Shin Ramen (Hot Chili)",
+    "shortDescription": "Intensely spicy chili flavored noodles",
+    "longDescription": "For those who dare to embrace extreme heat, Shin Ramen Hot Chili delivers an explosion of fiery flavor. Infused with premium chili peppers and a robust spice blend, this variety challenges even the most seasoned spice enthusiasts while maintaining the signature Shin Ramen taste.",
+    "image": "/img/shin-ramen-hot-chili.jpg",
+    "price": "Rs. 160"
+  },
+  {
+    "id": 4,
+    "name": "Champong Noodle Soup",
+    "shortDescription": "Spicy seafood noodle soup with vegetables",
+    "longDescription": "Champong Noodle Soup combines thick wheat noodles with a rich, spicy seafood broth packed with fresh vegetables and seafood. This hearty dish offers a perfect balance of textures and flavors, making it a satisfying meal that captures the essence of Korean street food culture.",
+    "image": "/img/champong-noodle-soup.jpg",
+    "price": "Rs. 180"
+  },
+  {
+    "id": 5,
+    "name": "Udon Noodle Soup",
+    "shortDescription": "Mild and comforting udon noodles in savory broth",
+    "longDescription": "Udon Noodle Soup provides a gentler alternative with its mild, savory broth and soft, chewy udon noodles. Enhanced with fresh vegetables and a hint of sesame oil, this comforting dish offers a soothing dining experience that's perfect for any time of day.",
+    "image": "/img/udon-noodle-soup.jpg",
+    "price": "Rs. 170"
+  },
+  {
+    "id": 6,
+    "name": "Ggotmarae-tang Noodle Soup",
+    "shortDescription": "Flower crab flavored noodle soup",
+    "longDescription": "Ggotmarae-tang Noodle Soup features a delicate yet flavorful broth inspired by traditional Korean flower crab soup. This unique variety combines thin noodles with a light, umami-rich broth that captures the subtle sweetness of crab, creating a refined and satisfying dining experience.",
+    "image": "/img/ggotmarae-tang-noodle-soup.jpg",
+    "price": "Rs. 190"
+  }
+]
