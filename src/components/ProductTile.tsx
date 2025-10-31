@@ -14,11 +14,13 @@ interface ProductTileProps {
 
 const ProductTile: React.FC<ProductTileProps> = ({ product }) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-1">
-      <div className="h-48 overflow-hidden">
-        <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex items-center justify-center">
-          <span className="text-gray-500">Product Image</span>
-        </div>
+    <div className="bg-[#faf0f0] rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-1">
+      <div className="h-48 overflow-hidden bg-gray-50 p-2 flex items-center justify-center">
+        <img 
+          src={product.image} 
+          alt={product.name} 
+          className="max-h-full max-w-full object-contain"
+        />
       </div>
       <div className="p-6">
         <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>

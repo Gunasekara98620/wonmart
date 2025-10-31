@@ -13,10 +13,18 @@ interface Product {
 }
 
 export default function ProductsPage() {
-  const products: Product[] = productsData as Product[];
+  // Transform the data to match what ProductTile expects
+  const products: Product[] = (productsData as any).products.map((product: any) => ({
+    id: product.id,
+    name: product.name,
+    shortDescription: product.description,
+    longDescription: product.description,
+    image: product.image, // Use the image path directly without adding /img/ prefix
+    price: product.price
+  }));
 
   return (
-    <div className="min-h-screen py-16">
+    <div className="min-h-screen py-16 bg-white bg-opacity-90">
       <div className="container mx-auto px-4">
         {/* Page Header */}
         <div className="text-center mb-16">
@@ -41,11 +49,15 @@ export default function ProductsPage() {
         </section>
         
         {/* Brand Information */}
-        <section className="mt-20 bg-gray-50 rounded-xl p-8 md:p-12">
+        <section className="mt-20 bg-gray-50 bg-opacity-80 rounded-xl p-8 md:p-12">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/3">
-              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center">
-                <span className="text-gray-500">Nongshim Brand Image</span>
+              <div className="w-full h-64 flex items-center justify-center">
+                <img 
+                  src="/img/Nongshim_Logo1.jpg" 
+                  alt="Nongshim Brand" 
+                  className="max-h-full max-w-full object-contain"
+                />
               </div>
             </div>
             <div className="md:w-2/3">

@@ -2,45 +2,43 @@ import HeroSection from "@/components/HeroSection";
 import SectionTitle from "@/components/SectionTitle";
 import ProductTile from "@/components/ProductTile";
 import Link from "next/link";
+import productsData from "@/data/products.json";
 
-// Mock product data for the homepage
-const featuredProducts = [
-  {
-    id: 1,
-    name: "Shin Ramen (Original)",
-    shortDescription: "Spicy Korean instant noodles with authentic flavor",
-    image: "/img/shin-ramen-original.jpg",
-    price: "Rs. 150"
-  },
-  {
-    id: 2,
-    name: "Shin Ramen (Neoguri)",
-    shortDescription: "Extra spicy seafood flavored instant noodles",
-    image: "/img/shin-ramen-neoguri.jpg",
-    price: "Rs. 160"
-  },
-  {
-    id: 3,
-    name: "Champong Noodle Soup",
-    shortDescription: "Spicy seafood noodle soup with vegetables",
-    image: "/img/champong-noodle-soup.jpg",
-    price: "Rs. 180"
-  }
-];
+// Type for our product data
+interface Product {
+  id: number;
+  name: string;
+  shortDescription: string;
+  image: string;
+  price: string;
+}
 
 export default function Home() {
+  // Use the first 3 products from our products data as featured products
+  const featuredProducts: Product[] = (productsData as any).products.slice(0, 3).map((product: any) => ({
+    id: product.id,
+    name: product.name,
+    shortDescription: product.description,
+    image: product.image,
+    price: product.price
+  }));
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ backgroundImage: "url('/img/bg0.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
       {/* Hero Section */}
       <HeroSection />
       
       {/* About Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white bg-opacity-90">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center">
-                <span className="text-gray-500">Company Image</span>
+              <div className="w-full h-96 flex items-center justify-center">
+                <img 
+                  src="/img/company name.png" 
+                  alt="Won Mart Company" 
+                  className="max-h-full max-w-full object-contain"
+                />
               </div>
             </div>
             <div className="md:w-1/2">
@@ -70,11 +68,12 @@ export default function Home() {
       </section>
       
       {/* Featured Products Section */}
-      <section className="py-16">
+      <section className="py-16 bg-white bg-opacity-85">
         <div className="container mx-auto px-4">
           <SectionTitle 
             title="Featured Products" 
             subtitle="Discover our most popular Nongshim products"
+            darkBackground={false}
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -95,21 +94,26 @@ export default function Home() {
       </section>
       
       {/* Partnership Section */}
-      <section className="py-16 bg-red-600 text-white">
+      <section className="py-16 bg-white bg-opacity-90">
         <div className="container mx-auto px-4 text-center">
           <SectionTitle 
             title="Our Partnership with Nongshim Korea" 
             subtitle="Bringing authentic Korean flavors to Sri Lanka since our partnership began"
             align="center"
+            darkBackground={false}
           />
           <div className="max-w-3xl mx-auto">
-            <p className="text-xl mb-8">
+            <p className="text-gray-700 text-xl mb-8">
               As the exclusive distributors in Sri Lanka, we work closely with Nongshim Korea to ensure 
               that you receive only the freshest and highest quality products. Our partnership is built 
               on a shared commitment to excellence and authenticity.
             </p>
-            <div className="bg-gray-200 border-2 border-dashed border-gray-300 rounded-xl w-64 h-32 mx-auto flex items-center justify-center">
-              <span className="text-gray-500">Nongshim Logo</span>
+            <div className="w-64 h-32 mx-auto flex items-center justify-center">
+              <img 
+                src="/img/Nongshim_Logo2.png" 
+                alt="Nongshim Korea" 
+                className="max-h-full max-w-full object-contain"
+              />
             </div>
           </div>
         </div>

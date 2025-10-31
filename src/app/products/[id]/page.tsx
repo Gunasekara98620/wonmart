@@ -15,14 +15,23 @@ interface Product {
 
 // Generate static params for static export
 export async function generateStaticParams() {
-  const products: Product[] = productsData as Product[];
-  return products.map((product) => ({
+  const products: Product[] = (productsData as any).products.map((product: any) => ({
     id: product.id.toString(),
   }));
+  return products;
 }
 
 export default function ProductDetailPage({ params }: { params: { id: string } }) {
-  const products: Product[] = productsData as Product[];
+  // Transform the data to match our expected structure
+  const products: Product[] = (productsData as any).products.map((product: any) => ({
+    id: product.id,
+    name: product.name,
+    shortDescription: product.description,
+    longDescription: product.description,
+    image: product.image,
+    price: product.price
+  }));
+
   const productId = parseInt(params.id);
   const product = products.find(p => p.id === productId);
 
@@ -30,6 +39,9 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
   if (!product) {
     notFound();
   }
+
+  // Find the original product data for weight
+  const originalProduct = (productsData as any).products.find((p: any) => p.id === productId);
 
   return (
     <div className="min-h-screen py-16">
@@ -50,8 +62,12 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
           <div className="md:flex">
             {/* Product Image */}
             <div className="md:w-1/2">
-              <div className="bg-gray-200 border-2 border-dashed w-full h-96 md:h-full flex items-center justify-center">
-                <span className="text-gray-500">Product Image</span>
+              <div className="w-full h-96 md:h-full flex items-center justify-center bg-gray-50 p-4">
+                <img 
+                  src={product.image} 
+                  alt={product.name} 
+                  className="max-h-full max-w-full object-contain"
+                />
               </div>
             </div>
             
@@ -95,7 +111,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                     </li>
                     <li className="flex">
                       <span className="font-medium w-32">Weight:</span>
-                      <span>120g</span>
+                      <span>{originalProduct?.weight || "120g"}</span>
                     </li>
                     <li className="flex">
                       <span className="font-medium w-32">Shelf Life:</span>

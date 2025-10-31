@@ -1,50 +1,52 @@
-[
-  {
-    "id": 1,
-    "name": "Shin Ramen (Original)",
-    "shortDescription": "Spicy Korean instant noodles with authentic flavor",
-    "longDescription": "Experience the authentic taste of Korea with Shin Ramen Original. This iconic instant noodle features a rich, spicy broth that has made it a favorite worldwide. Made with premium ingredients and the perfect balance of spices, it delivers an unforgettable culinary adventure in every bowl.",
-    "image": "/img/shin-ramen-original.jpg",
-    "price": "Rs. 150"
-  },
-  {
-    "id": 2,
-    "name": "Shin Ramen (Neoguri)",
-    "shortDescription": "Extra spicy seafood flavored instant noodles",
-    "longDescription": "Shin Ramen Neoguri takes the heat to the next level with its fiery seafood flavor. Packed with dried anchovies, kelp, and premium spices, this extra-spicy variety offers an intense umami experience that will satisfy your cravings for bold, oceanic flavors.",
-    "image": "/img/shin-ramen-neoguri.jpg",
-    "price": "Rs. 160"
-  },
-  {
-    "id": 3,
-    "name": "Shin Ramen (Hot Chili)",
-    "shortDescription": "Intensely spicy chili flavored noodles",
-    "longDescription": "For those who dare to embrace extreme heat, Shin Ramen Hot Chili delivers an explosion of fiery flavor. Infused with premium chili peppers and a robust spice blend, this variety challenges even the most seasoned spice enthusiasts while maintaining the signature Shin Ramen taste.",
-    "image": "/img/shin-ramen-hot-chili.jpg",
-    "price": "Rs. 160"
-  },
-  {
-    "id": 4,
-    "name": "Champong Noodle Soup",
-    "shortDescription": "Spicy seafood noodle soup with vegetables",
-    "longDescription": "Champong Noodle Soup combines thick wheat noodles with a rich, spicy seafood broth packed with fresh vegetables and seafood. This hearty dish offers a perfect balance of textures and flavors, making it a satisfying meal that captures the essence of Korean street food culture.",
-    "image": "/img/champong-noodle-soup.jpg",
-    "price": "Rs. 180"
-  },
-  {
-    "id": 5,
-    "name": "Udon Noodle Soup",
-    "shortDescription": "Mild and comforting udon noodles in savory broth",
-    "longDescription": "Udon Noodle Soup provides a gentler alternative with its mild, savory broth and soft, chewy udon noodles. Enhanced with fresh vegetables and a hint of sesame oil, this comforting dish offers a soothing dining experience that's perfect for any time of day.",
-    "image": "/img/udon-noodle-soup.jpg",
-    "price": "Rs. 170"
-  },
-  {
-    "id": 6,
-    "name": "Ggotmarae-tang Noodle Soup",
-    "shortDescription": "Flower crab flavored noodle soup",
-    "longDescription": "Ggotmarae-tang Noodle Soup features a delicate yet flavorful broth inspired by traditional Korean flower crab soup. This unique variety combines thin noodles with a light, umami-rich broth that captures the subtle sweetness of crab, creating a refined and satisfying dining experience.",
-    "image": "/img/ggotmarae-tang-noodle-soup.jpg",
-    "price": "Rs. 190"
-  }
-]
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Nongshim Shin Ramyun Original Noodle Soup",
+      "description": "The classic Korean ramen with rich, spicy broth and chewy noodles — Korea's No.1 instant noodle enjoyed worldwide.",
+      "image": "/products/01.jpg",
+      "price": "LKR 490",
+      "weight": "120g"
+    },
+    {
+      "id": 2,
+      "name": "Nongshim Shin Ramyun Kimchi",
+      "description": "A bold fusion of traditional Shin Ramyun flavor and tangy Korean kimchi spice, perfect for authentic Korean taste lovers.",
+      "image": "/products/02.png",
+      "price": "LKR 580",
+      "weight": "120g"
+    },
+    {
+      "id": 3,
+      "name": "Nongshim Shin Ramyun Toomba Spicy & Creamy",
+      "description": "A creamy twist to the Shin classic — combining fiery spice with a smooth, rich texture inspired by Korean Tteokbokki flavors.",
+      "image": "/products/03.jpg",
+      "price": "LKR 580",
+      "weight": "137g"
+    },
+    {
+      "id": 4,
+      "name": "Nongshim Shin Ramyun With Cheese Stir Fry Spicy Noodles",
+      "description": "Deliciously cheesy and intensely spicy stir-fry noodles — perfect for those who love bold and creamy fusion flavors.",
+      "image": "/products/04.jpg",
+      "price": "LKR 580",
+      "weight": "136g"
+    },
+    {
+      "id": 5,
+      "name": "Nongshim Shin Ramyun Hot Spicy Chicken",
+      "description": "Infused with Korean-style spicy chicken flavor — fiery, flavorful, and addictive with a satisfying noodle texture.",
+      "image": "/products/05.jpg",
+      "price": "LKR 580",
+      "weight": "120g"
+    },
+    {
+      "id": 6,
+      "name": "Nongshim Shin Ramyun Red Super Spicy",
+      "description": "An extreme version of Shin Ramyun — bold, deep, and super spicy for true heat seekers craving intense flavor.",
+      "image": "/products/06.jpg",
+      "price": "LKR 580",
+      "weight": "120g"
+    }
+  ]
+}

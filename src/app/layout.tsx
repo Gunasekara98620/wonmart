@@ -28,7 +28,7 @@ export default function RootLayout({
         className={`${inter.variable} antialiased`}
       >
         <Navbar />
-        <main className="pt-20">
+        <main>
           {children}
         </main>
         <Footer />
