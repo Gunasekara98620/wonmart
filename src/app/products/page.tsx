@@ -1,6 +1,7 @@
 import SectionTitle from "@/components/SectionTitle";
 import ProductTile from "@/components/ProductTile";
 import productsData from "@/data/products.json";
+import Image from "next/image";
 
 // Type for our product data
 interface Product {
@@ -12,9 +13,21 @@ interface Product {
   price: string;
 }
 
+// Type for products data structure
+interface ProductsData {
+  products: Array<{
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+    price: string;
+    weight: string;
+  }>;
+}
+
 export default function ProductsPage() {
   // Transform the data to match what ProductTile expects
-  const products: Product[] = (productsData as any).products.map((product: any) => ({
+  const products: Product[] = (productsData as ProductsData).products.map((product) => ({
     id: product.id,
     name: product.name,
     shortDescription: product.description,
@@ -53,9 +66,11 @@ export default function ProductsPage() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/3">
               <div className="w-full h-64 flex items-center justify-center">
-                <img 
+                <Image 
                   src="/img/Nongshim_Logo1.jpg" 
                   alt="Nongshim Brand" 
+                  width={300}
+                  height={200}
                   className="max-h-full max-w-full object-contain"
                 />
               </div>

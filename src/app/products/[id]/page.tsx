@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Button from "@/components/Button";
 import productsData from "@/data/products.json";
+import Image from "next/image";
 
 // Type for our product data
 interface Product {
@@ -13,9 +14,26 @@ interface Product {
   price: string;
 }
 
+// Type for products data structure
+interface ProductsData {
+  products: Array<{
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+    price: string;
+    weight: string;
+  }>;
+}
+
+// Type for static params
+interface StaticParams {
+  id: string;
+}
+
 // Generate static params for static export
-export async function generateStaticParams() {
-  const products: Product[] = (productsData as any).products.map((product: any) => ({
+export async function generateStaticParams(): Promise<StaticParams[]> {
+  const products: StaticParams[] = (productsData as ProductsData).products.map((product) => ({
     id: product.id.toString(),
   }));
   return products;
@@ -23,7 +41,7 @@ export async function generateStaticParams() {
 
 export default function ProductDetailPage({ params }: { params: { id: string } }) {
   // Transform the data to match our expected structure
-  const products: Product[] = (productsData as any).products.map((product: any) => ({
+  const products: Product[] = (productsData as ProductsData).products.map((product) => ({
     id: product.id,
     name: product.name,
     shortDescription: product.description,
@@ -41,7 +59,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
   }
 
   // Find the original product data for weight
-  const originalProduct = (productsData as any).products.find((p: any) => p.id === productId);
+  const originalProduct = (productsData as ProductsData).products.find((p) => p.id === productId);
 
   return (
     <div className="min-h-screen py-16">
@@ -63,9 +81,11 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
             {/* Product Image */}
             <div className="md:w-1/2">
               <div className="w-full h-96 md:h-full flex items-center justify-center bg-gray-50 p-4">
-                <img 
+                <Image 
                   src={product.image} 
                   alt={product.name} 
+                  width={500}
+                  height={500}
                   className="max-h-full max-w-full object-contain"
                 />
               </div>

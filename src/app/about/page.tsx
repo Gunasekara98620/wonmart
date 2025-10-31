@@ -1,4 +1,5 @@
 import SectionTitle from "@/components/SectionTitle";
+import Image from "next/image";
 // Remove unused Button import
 
 export default function AboutPage() {
@@ -18,9 +19,11 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
               <div className="w-full h-96 flex items-center justify-center">
-                <img 
+                <Image 
                   src="/img/company.PNG" 
                   alt="Company History" 
+                  width={500}
+                  height={400}
                   className="max-h-full max-w-full object-contain rounded-xl"
                 />
               </div>
@@ -52,9 +55,11 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row-reverse items-center gap-12">
             <div className="md:w-1/2">
               <div className="w-full h-96 flex items-center justify-center">
-                <img 
+                <Image 
                   src="/img/ngsl.jpg" 
                   alt="Mission & Vision" 
+                  width={500}
+                  height={400}
                   className="max-h-full max-w-full object-contain rounded-xl"
                 />
               </div>
@@ -88,9 +93,11 @@ export default function AboutPage() {
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="md:w-1/3">
                 <div className="w-full h-64 flex items-center justify-center">
-                  <img 
+                  <Image 
                     src="/img/Nongshim-Company.jpg" 
                     alt="Nongshim Company" 
+                    width={300}
+                    height={200}
                     className="max-h-full max-w-full object-contain rounded-xl"
                   />
                 </div>

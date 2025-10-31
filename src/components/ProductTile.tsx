@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface Product {
   id: number;
@@ -16,9 +17,11 @@ const ProductTile: React.FC<ProductTileProps> = ({ product }) => {
   return (
     <div className="bg-[#faf0f0] rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-1">
       <div className="h-48 overflow-hidden bg-gray-50 p-2 flex items-center justify-center">
-        <img 
+        <Image 
           src={product.image} 
           alt={product.name} 
+          width={300}
+          height={300}
           className="max-h-full max-w-full object-contain"
         />
       </div>

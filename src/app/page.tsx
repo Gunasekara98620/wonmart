@@ -3,6 +3,7 @@ import SectionTitle from "@/components/SectionTitle";
 import ProductTile from "@/components/ProductTile";
 import Link from "next/link";
 import productsData from "@/data/products.json";
+import Image from "next/image";
 
 // Type for our product data
 interface Product {
@@ -13,9 +14,21 @@ interface Product {
   price: string;
 }
 
+// Type for products data structure
+interface ProductsData {
+  products: Array<{
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+    price: string;
+    weight: string;
+  }>;
+}
+
 export default function Home() {
   // Use the first 3 products from our products data as featured products
-  const featuredProducts: Product[] = (productsData as any).products.slice(0, 3).map((product: any) => ({
+  const featuredProducts: Product[] = (productsData as ProductsData).products.slice(0, 3).map((product) => ({
     id: product.id,
     name: product.name,
     shortDescription: product.description,
@@ -34,9 +47,11 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
               <div className="w-full h-96 flex items-center justify-center">
-                <img 
+                <Image 
                   src="/img/company name.png" 
                   alt="Won Mart Company" 
+                  width={400}
+                  height={300}
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
@@ -109,9 +124,11 @@ export default function Home() {
               on a shared commitment to excellence and authenticity.
             </p>
             <div className="w-64 h-32 mx-auto flex items-center justify-center">
-              <img 
+              <Image 
                 src="/img/Nongshim_Logo2.png" 
                 alt="Nongshim Korea" 
+                width={200}
+                height={100}
                 className="max-h-full max-w-full object-contain"
               />
             </div>
