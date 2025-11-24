@@ -55,8 +55,8 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-bold text-gray-900 mb-1">Address</h4>
                     <p className="text-gray-600">
-                      Won Mart Pvt Ltd<br />
-                      206, Rolawatta, Meegama, Darga Town
+                      Won Mart (Pvt) Ltd<br />
+                      206, Rolawatta, Meegama, Dharga Town
                     </p>
                   </div>
                 </div>

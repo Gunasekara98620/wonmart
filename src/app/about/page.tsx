@@ -8,7 +8,7 @@ export default function AboutPage() {
       <div className="container mx-auto px-4">
         {/* Page Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">About Won Mart Pvt Ltd</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">About Won Mart (Pvt) Ltd</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Your trusted partner for authentic Korean cuisine in Sri Lanka
           </p>
@@ -34,7 +34,7 @@ export default function AboutPage() {
                 align="left"
               />
               <p className="text-gray-600 mb-6 text-lg">
-                Founded with a passion for Korean cuisine, Won Mart Pvt Ltd has been the leading distributor 
+                Founded with a passion for Korean cuisine, Won Mart (Pvt) Ltd has been the leading distributor 
                 of Nongshim Korea food products in Sri Lanka for several years. Our journey began with a 
                 simple vision: to bring authentic Korean flavors to Sri Lankan households.
               </p>

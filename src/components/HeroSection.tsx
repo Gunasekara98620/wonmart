@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{ 
-          backgroundImage: "url('/img/bg0.jpg')",
+          backgroundImage: "url('/img/bg5.jpg')",
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat'
@@ -18,10 +18,10 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl" style={{ paddingLeft: '1in' }}>
           <h1 className="text-4xl md:text-6xl font-bold text-black mb-6 inline-block px-6 py-3 rounded-full" 
               style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }}>
-            Won Mart Pvt Ltd
+            Won Mart (Pvt) Ltd
           </h1>
           <p className="text-xl md:text-2xl text-black mb-8 inline-block px-6 py-3 rounded-full" 
              style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }}>
@@ -31,7 +31,7 @@ const HeroSection = () => {
              style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }}>
             Bringing authentic Korean flavors to your table with our premium selection of Nongshim products.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Link 
               href="/products" 
               className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105"

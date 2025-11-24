@@ -7,9 +7,11 @@ const nextConfig: NextConfig = {
   },
   // Image optimization configuration
   images: {
-    // Keep image optimization enabled for development and production server mode
-    unoptimized: false,
+    // Disable image optimization for static export
+    unoptimized: true,
   },
+  // Enable static export
+  output: 'export',
 };
 
 export default nextConfig;

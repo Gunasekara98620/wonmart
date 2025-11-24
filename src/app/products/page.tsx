@@ -1,5 +1,9 @@
+"use client";
+
+import { useState } from "react";
 import SectionTitle from "@/components/SectionTitle";
 import ProductTile from "@/components/ProductTile";
+import ProductModal from "@/components/ProductModal";
 import productsData from "@/data/products.json";
 import Image from "next/image";
 
@@ -11,6 +15,7 @@ interface Product {
   longDescription: string;
   image: string;
   price: string;
+  weight: string;
 }
 
 // Type for products data structure
@@ -32,9 +37,23 @@ export default function ProductsPage() {
     name: product.name,
     shortDescription: product.description,
     longDescription: product.description,
-    image: product.image, // Use the image path directly without adding /img/ prefix
-    price: product.price
+    image: product.image,
+    price: product.price,
+    weight: product.weight
   }));
+
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (product: Product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
 
   return (
     <div className="min-h-screen py-16 bg-white bg-opacity-90">
@@ -56,7 +75,11 @@ export default function ProductsPage() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => (
-              <ProductTile key={product.id} product={product} />
+              <ProductTile 
+                key={product.id} 
+                product={product} 
+                onOpenModal={openModal} 
+              />
             ))}
           </div>
         </section>
@@ -95,6 +118,15 @@ export default function ProductsPage() {
           </div>
         </section>
       </div>
+      
+      {/* Product Modal */}
+      {isModalOpen && (
+        <ProductModal 
+          product={selectedProduct} 
+          isOpen={isModalOpen} 
+          onClose={closeModal} 
+        />
+      )}
     </div>
   );
 }

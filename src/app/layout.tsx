@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Won Mart Pvt Ltd - Nongshim Korea Food Products",
+  title: "Won Mart (Pvt) Ltd - Nongshim Korea Food Products",
   description: "Sole Distributor in Sri Lanka of Nongshim Korea Food Products",
   icons: {
     icon: '/favicon.ico',

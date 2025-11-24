@@ -1,6 +1,6 @@
 You are an expert Next.js 14 and Tailwind CSS developer.
 
-Build a fully responsive, production-ready website for **Won Mart Pvt Ltd**, the **Sole Distributor in Sri Lanka of the Food Products of Nongshim Korea**.  
+Build a fully responsive, production-ready website for **Won Mart (Pvt) Ltd**, the **Sole Distributor in Sri Lanka of the Food Products of Nongshim Korea**.  
 The company imports and distributes **Korean Shin Ramen Noodles** and other food products from **Nongshim Company, Korea**.
 
 ### Project Requirements:

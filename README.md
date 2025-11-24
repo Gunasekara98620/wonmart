@@ -1,6 +1,6 @@
-# Won Mart Pvt Ltd - Nongshim Korea Food Products
+# Won Mart (Pvt) Ltd - Nongshim Korea Food Products
 
-This is a [Next.js](https://nextjs.org/) project for Won Mart Pvt Ltd, the sole distributor in Sri Lanka of food products from Nongshim Korea.
+This is a [Next.js](https://nextjs.org/) project for Won Mart (Pvt) Ltd, the sole distributor in Sri Lanka of food products from Nongshim Korea.
 
 ## Features
 

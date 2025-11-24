@@ -1,6 +1,10 @@
+"use client";
+
+import { useState } from "react";
 import HeroSection from "@/components/HeroSection";
 import SectionTitle from "@/components/SectionTitle";
 import ProductTile from "@/components/ProductTile";
+import ProductModal from "@/components/ProductModal";
 import Link from "next/link";
 import productsData from "@/data/products.json";
 import Image from "next/image";
@@ -10,8 +14,10 @@ interface Product {
   id: number;
   name: string;
   shortDescription: string;
+  longDescription: string;
   image: string;
   price: string;
+  weight: string;
 }
 
 // Type for products data structure
@@ -32,12 +38,27 @@ export default function Home() {
     id: product.id,
     name: product.name,
     shortDescription: product.description,
+    longDescription: product.description,
     image: product.image,
-    price: product.price
+    price: product.price,
+    weight: product.weight
   }));
 
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (product: Product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
+
   return (
-    <div className="min-h-screen" style={{ backgroundImage: "url('/img/bg0.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
+    <div className="min-h-screen" style={{ backgroundImage: "url('/img/bg5.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
       {/* Hero Section */}
       <HeroSection />
       
@@ -63,7 +84,7 @@ export default function Home() {
                 align="left"
               />
               <p className="text-gray-600 mb-6 text-lg">
-                Won Mart Pvt Ltd is the sole distributor in Sri Lanka of premium food products from Nongshim Korea. 
+                Won Mart (Pvt) Ltd is the sole distributor in Sri Lanka of premium food products from Nongshim Korea. 
                 We are committed to bringing authentic Korean flavors to your table with our carefully curated selection 
                 of Nongshim products.
               </p>
@@ -93,7 +114,11 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProducts.map((product) => (
-              <ProductTile key={product.id} product={product} />
+              <ProductTile 
+                key={product.id} 
+                product={product} 
+                onOpenModal={openModal} 
+              />
             ))}
           </div>
           
@@ -135,6 +160,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* Product Modal */}
+      <ProductModal 
+        product={selectedProduct} 
+        isOpen={isModalOpen} 
+        onClose={closeModal} 
+      />
     </div>
   );
 }

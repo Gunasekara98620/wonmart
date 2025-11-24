@@ -56,8 +56,8 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Contact Us</h4>
             <address className="not-italic text-gray-800">
-              <p className="mb-2">Won Mart Pvt Ltd</p>
-              <p className="mb-2">206, Rolawatta, Meegama, Darga Town</p>
+              <p className="mb-2">Won Mart (Pvt) Ltd</p>
+              <p className="mb-2">206, Rolawatta, Meegama, Dharga Town</p>
               <p className="mb-2">Email: info.wonm@gmail.com</p>
               <p className="mb-4">Phone: +94 766262903</p>
               
@@ -99,7 +99,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-300 mt-8 pt-8 text-center text-gray-800">
-          <p>&copy; {new Date().getFullYear()} Won Mart Pvt Ltd. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Won Mart (Pvt) Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>
