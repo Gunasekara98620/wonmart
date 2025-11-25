@@ -35,7 +35,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-bold text-gray-900 mb-1">WhatsApp</h4>
                     <a 
-                      href="https://wa.me/94761736100"  //Inventory Manager Whatsapp
+                      href="https://wa.me/94741736100"  //Inventory Manager Whatsapp
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-green-600 hover:text-green-800 font-medium"
