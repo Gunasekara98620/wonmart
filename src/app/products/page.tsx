@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 "use client";
 
 import { useState } from "react";
@@ -31,36 +30,7 @@ interface ProductsData {
   }>;
 }
 
-export const metadata: Metadata = {
-  title: "Korean Food Products - Nongshim Range | Won Mart Sri Lanka",
-  description: "Shop authentic Nongshim Korean food products including Shin Ramyun, Neoguri, Chapagetti and more. Premium Korean instant noodles and snacks delivered islandwide in Sri Lanka.",
-  keywords: [
-    "Korean food products",
-    "Nongshim products",
-    "Shin Ramyun",
-    "Neoguri",
-    "Chapagetti",
-    "Korean instant noodles",
-    "Ramyun",
-    "ShinRamyun",
-    "Kfood",
-    "Korea",
-    "Korean food",
-    "Ramen",
-    "Korean snacks",
-    "Asian food",
-    "Korean grocery",
-    "Korean cuisine",
-    "authentic Korean",
-    "Korean delicacies",
-    "instant noodles Sri Lanka"
-  ],
-  openGraph: {
-    title: "Nongshim Products | Korean Food Range",
-    description: "Discover authentic Korean instant noodles and food products from Nongshim Korea, exclusively distributed by Won Mart in Sri Lanka.",
-    url: '/products',
-  },
-};
+
 
 export default function ProductsPage() {
   // Transform the data to match what ProductTile expects
