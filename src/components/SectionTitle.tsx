@@ -5,13 +5,15 @@ interface SectionTitleProps {
   subtitle?: string;
   align?: "left" | "center" | "right";
   darkBackground?: boolean;
+  id?: string;
 }
 
 const SectionTitle: React.FC<SectionTitleProps> = ({ 
   title, 
   subtitle, 
   align = "center",
-  darkBackground = false
+  darkBackground = false,
+  id
 }) => {
   const alignmentClasses = {
     left: "text-left",
@@ -29,7 +31,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
 
   return (
     <div className={`mb-12 ${alignmentClasses[align]}`}>
-      <h2 className={titleClasses}>
+      <h2 className={titleClasses} id={id}>
         {title}
       </h2>
       {subtitle && (
