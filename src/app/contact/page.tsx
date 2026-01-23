@@ -1,5 +1,33 @@
+import type { Metadata } from "next";
 import SectionTitle from "@/components/SectionTitle";
 import ContactForm from "@/components/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Contact Won Mart (Pvt) Ltd - Korean Food Distributors in Sri Lanka",
+  description: "Get in touch with Won Mart (Pvt) Ltd, Sri Lanka's authorized distributor of Nongshim Korean food products. Reach us via phone, email, WhatsApp, or visit our location in Dharga Town.",
+  keywords: [
+    "Contact Won Mart",
+    "Korean food distributors Sri Lanka",
+    "Nongshim Sri Lanka",
+    "Korean food products",
+    "Korean cuisine Sri Lanka",
+    "Ramyun",
+    "ShinRamyun",
+    "Kfood",
+    "Korea",
+    "Korean food",
+    "Ramen",
+    "Korean grocery",
+    "Korean snacks",
+    "Asian food",
+    "Korean instant noodles"
+  ],
+  openGraph: {
+    title: "Contact Won Mart | Korean Food Distributors",
+    description: "Connect with Sri Lanka's premier Korean food distributor. Find our location, phone numbers, email, and business hours.",
+    url: '/contact',
+  },
+};
 
 export default function ContactPage() {
   return (

@@ -3,8 +3,28 @@ import SectionTitle from "@/components/SectionTitle";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "About Us - Won Mart (Pvt) Ltd | Korean Food Distributors",
-  description: "Learn about Won Mart (Pvt) Ltd, Sri Lanka's sole authorized distributor of Nongshim Korean food products. Discover our history, mission, and commitment to authentic Korean cuisine.",
+  title: "About Won Mart (Pvt) Ltd - Leading Korean Food Distributors in Sri Lanka",
+  description: "Learn about Won Mart (Pvt) Ltd, Sri Lanka's premier distributor of authentic Nongshim Korean food products. Discover our history, mission, and commitment to quality Kfood and Korean culture.",
+  keywords: [
+    "About Won Mart",
+    "Korean food distributors",
+    "Nongshim Sri Lanka",
+    "Korean food products",
+    "authentic Korean cuisine",
+    "Korean culture Sri Lanka",
+    "Ramyun",
+    "ShinRamyun",
+    "Kfood",
+    "Korea",
+    "Korean food",
+    "Ramen",
+    "Kpop",
+    "Kdrama",
+    "Kbeauty",
+    "Asian food",
+    "Korean instant noodles",
+    "Korean grocery"
+  ],
   openGraph: {
     title: "About Won Mart | Korean Food Distributors in Sri Lanka",
     description: "The story behind Sri Lanka's premier Korean food distributor and our partnership with Nongshim Korea.",

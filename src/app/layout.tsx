@@ -24,7 +24,28 @@ export const metadata: Metadata = {
     "Shin Ramen Sri Lanka",
     "Korean snacks Sri Lanka",
     "food distribution Sri Lanka",
-    "Nongshim products"
+    "Nongshim products",
+    "Ramyun",
+    "ShinRamyun",
+    "Kfood",
+    "Korea",
+    "Korean food",
+    "Ramen",
+    "Kpop",
+    "Kdrama",
+    "Kbeauty",
+    "Korean culture",
+    "Asian food",
+    "Korean instant noodles",
+    "Shin Black",
+    "Neoguri",
+    "Chapagetti",
+    "Korean cuisine",
+    "authentic Korean",
+    "Korean delicacies",
+    "Korean snacks",
+    "Korean grocery",
+    "Korean market Sri Lanka"
   ],
   authors: [{ name: "Won Mart (Pvt) Ltd" }],
   creator: "Won Mart (Pvt) Ltd",
@@ -94,6 +115,70 @@ export default function RootLayout({
       >
         <Navbar />
         <main>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Won Mart (Pvt) Ltd",
+                "url": "https://wonmart.lk",
+                "logo": "https://wonmart.lk/img/WonMart_Logo.png",
+                "description": "Sole authorized distributor of Nongshim Korea food products in Sri Lanka",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "206, Rolawatta",
+                  "addressLocality": "Meegama",
+                  "addressRegion": "Dharga Town",
+                  "addressCountry": "LK"
+                },
+                "telephone": "+94 766262903",
+                "email": "info.wonm@gmail.com",
+                "sameAs": [
+                  "https://www.facebook.com/NongshimSriLanka/",
+                  "https://www.tiktok.com/@nongshim_srilanka",
+                  "http://www.youtube.com/@NongshimSriLanka"
+                ],
+                "areaServed": "LK",
+                "brand": "Nongshim",
+                "founder": "Won Mart Team",
+                "foundingLocation": "Sri Lanka",
+                "knowsAbout": [
+                  "Korean Food",
+                  "Ramyun",
+                  "Shin Ramen",
+                  "Instant Noodles",
+                  "Korean Cuisine",
+                  "Asian Food",
+                  "Kfood"
+                ],
+                "makesOffer": [
+                  {
+                    "@type": "OfferCatalog",
+                    "name": "Nongshim Products",
+                    "itemListElement": [
+                      {
+                        "@type": "Offer",
+                        "itemOffered": {
+                          "@type": "Product",
+                          "name": "Shin Ramyun",
+                          "category": "Food"
+                        }
+                      },
+                      {
+                        "@type": "Offer",
+                        "itemOffered": {
+                          "@type": "Product",
+                          "name": "Neoguri",
+                          "category": "Food"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              })
+            }}
+          />
           {children}
         </main>
         <Footer />

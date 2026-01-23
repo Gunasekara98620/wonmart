@@ -1,0 +1,33 @@
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://wonmart.lk/sitemap.xml
+
+# Host
+Host: https://wonmart.lk
+
+# Crawling delay (optional)
+Crawl-delay: 5
+
+# Disallow private or admin areas if they exist
+# Disallow: /admin/
+# Disallow: /private/
+
+# Specific user agent rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block access to certain file types
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.xls$

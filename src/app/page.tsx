@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 "use client";
 
+import type { Metadata } from "next";
 import { useState } from "react";
 import HeroSection from "@/components/HeroSection";
 import SectionTitle from "@/components/SectionTitle";
@@ -33,16 +33,6 @@ interface ProductsData {
   }>;
 }
 
-export const metadata: Metadata = {
-  title: "Home - Authentic Korean Food Products in Sri Lanka",
-  description: "Welcome to Won Mart (Pvt) Ltd, Sri Lanka's premier distributor of authentic Nongshim Korean food products. Discover premium instant noodles, snacks, and authentic Korean cuisine.",
-  openGraph: {
-    title: "Won Mart - Home | Authentic Korean Food Products",
-    description: "Sri Lanka's #1 destination for authentic Nongshim Korean food products with islandwide delivery.",
-    url: '/',
-  },
-};
-
 export default function Home() {
   // Use the first 3 products from our products data as featured products
   const featuredProducts: Product[] = (productsData as ProductsData).products.slice(0, 3).map((product) => ({
@@ -71,106 +61,113 @@ export default function Home() {
   return (
     <div className="min-h-screen" style={{ backgroundImage: "url('/img/bg5.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
       {/* Hero Section */}
-      <HeroSection />
+      <header>
+        <HeroSection />
+      </header>
       
-      {/* About Section */}
-      <section className="py-16 bg-white bg-opacity-90">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/2">
-              <div className="w-full h-96 flex items-center justify-center">
+      <main>
+        {/* About Section */}
+        <section className="py-16 bg-white bg-opacity-90" aria-labelledby="about-heading">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center gap-12">
+              <div className="md:w-1/2">
+                <div className="w-full h-96 flex items-center justify-center">
+                  <Image 
+                    src="/img/company name.png" 
+                    alt="Won Mart Company" 
+                    width={400}
+                    height={300}
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+              </div>
+              <div className="md:w-1/2">
+                <SectionTitle 
+                  id="about-heading"
+                  title="About Won Mart" 
+                  subtitle="Your trusted partner for authentic Korean cuisine in Sri Lanka"
+                  align="left"
+                />
+                <p className="text-gray-600 mb-6 text-lg">
+                  Won Mart (Pvt) Ltd is the sole distributor in Sri Lanka of premium food products from Nongshim Korea. 
+                  We are committed to bringing authentic Korean flavors to your table with our carefully curated selection 
+                  of Nongshim products.
+                </p>
+                <p className="text-gray-600 mb-8 text-lg">
+                  Since our establishment, we have been dedicated to providing Sri Lankan consumers with the highest 
+                  quality Korean food products, ensuring that every bite delivers the genuine taste of Korea.
+                </p>
+                <Link 
+                  href="/about"
+                  className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block"
+                >
+                  Learn More About Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Products Section */}
+        <section className="py-16 bg-white bg-opacity-85" aria-labelledby="products-heading">
+          <div className="container mx-auto px-4">
+            <SectionTitle 
+              id="products-heading"
+              title="Featured Products" 
+              subtitle="Discover our most popular Nongshim products"
+              darkBackground={false}
+            />
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredProducts.map((product) => (
+                <ProductTile 
+                  key={product.id} 
+                  product={product} 
+                  onOpenModal={openModal} 
+                />
+              ))}
+            </div>
+            
+            <div className="text-center mt-12">
+              <Link 
+                href="/products"
+                className="bg-transparent border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block"
+              >
+                View All Products
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Partnership Section */}
+        <section className="py-16 bg-white bg-opacity-90" aria-labelledby="partnership-heading">
+          <div className="container mx-auto px-4 text-center">
+            <SectionTitle 
+              id="partnership-heading"
+              title="Our Partnership with Nongshim Korea" 
+              subtitle="Bringing authentic Korean flavors to Sri Lanka since our partnership began"
+              align="center"
+              darkBackground={false}
+            />
+            <div className="max-w-3xl mx-auto">
+              <p className="text-gray-700 text-xl mb-8">
+                As the exclusive distributors in Sri Lanka, we work closely with Nongshim Korea to ensure 
+                that you receive only the freshest and highest quality products. Our partnership is built 
+                on a shared commitment to excellence and authenticity.
+              </p>
+              <div className="w-64 h-32 mx-auto flex items-center justify-center">
                 <Image 
-                  src="/img/company name.png" 
-                  alt="Won Mart Company" 
-                  width={400}
-                  height={300}
+                  src="/img/Nongshim_Logo2.png" 
+                  alt="Nongshim Korea" 
+                  width={200}
+                  height={100}
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
             </div>
-            <div className="md:w-1/2">
-              <SectionTitle 
-                title="About Won Mart" 
-                subtitle="Your trusted partner for authentic Korean cuisine in Sri Lanka"
-                align="left"
-              />
-              <p className="text-gray-600 mb-6 text-lg">
-                Won Mart (Pvt) Ltd is the sole distributor in Sri Lanka of premium food products from Nongshim Korea. 
-                We are committed to bringing authentic Korean flavors to your table with our carefully curated selection 
-                of Nongshim products.
-              </p>
-              <p className="text-gray-600 mb-8 text-lg">
-                Since our establishment, we have been dedicated to providing Sri Lankan consumers with the highest 
-                quality Korean food products, ensuring that every bite delivers the genuine taste of Korea.
-              </p>
-              <Link 
-                href="/about"
-                className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block"
-              >
-                Learn More About Us
-              </Link>
-            </div>
           </div>
-        </div>
-      </section>
-      
-      {/* Featured Products Section */}
-      <section className="py-16 bg-white bg-opacity-85">
-        <div className="container mx-auto px-4">
-          <SectionTitle 
-            title="Featured Products" 
-            subtitle="Discover our most popular Nongshim products"
-            darkBackground={false}
-          />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredProducts.map((product) => (
-              <ProductTile 
-                key={product.id} 
-                product={product} 
-                onOpenModal={openModal} 
-              />
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Link 
-              href="/products"
-              className="bg-transparent border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block"
-            >
-              View All Products
-            </Link>
-          </div>
-        </div>
-      </section>
-      
-      {/* Partnership Section */}
-      <section className="py-16 bg-white bg-opacity-90">
-        <div className="container mx-auto px-4 text-center">
-          <SectionTitle 
-            title="Our Partnership with Nongshim Korea" 
-            subtitle="Bringing authentic Korean flavors to Sri Lanka since our partnership began"
-            align="center"
-            darkBackground={false}
-          />
-          <div className="max-w-3xl mx-auto">
-            <p className="text-gray-700 text-xl mb-8">
-              As the exclusive distributors in Sri Lanka, we work closely with Nongshim Korea to ensure 
-              that you receive only the freshest and highest quality products. Our partnership is built 
-              on a shared commitment to excellence and authenticity.
-            </p>
-            <div className="w-64 h-32 mx-auto flex items-center justify-center">
-              <Image 
-                src="/img/Nongshim_Logo2.png" 
-                alt="Nongshim Korea" 
-                width={200}
-                height={100}
-                className="max-h-full max-w-full object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
       
       {/* Product Modal */}
       <ProductModal 
