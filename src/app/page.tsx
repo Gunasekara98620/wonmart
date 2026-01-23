@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 "use client";
 
 import { useState } from "react";
@@ -31,6 +32,16 @@ interface ProductsData {
     weight: string;
   }>;
 }
+
+export const metadata: Metadata = {
+  title: "Home - Authentic Korean Food Products in Sri Lanka",
+  description: "Welcome to Won Mart (Pvt) Ltd, Sri Lanka's premier distributor of authentic Nongshim Korean food products. Discover premium instant noodles, snacks, and authentic Korean cuisine.",
+  openGraph: {
+    title: "Won Mart - Home | Authentic Korean Food Products",
+    description: "Sri Lanka's #1 destination for authentic Nongshim Korean food products with islandwide delivery.",
+    url: '/',
+  },
+};
 
 export default function Home() {
   // Use the first 3 products from our products data as featured products

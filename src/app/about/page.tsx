@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import SectionTitle from "@/components/SectionTitle";
 import Image from "next/image";
-// Remove unused Button import
+
+export const metadata: Metadata = {
+  title: "About Us - Won Mart (Pvt) Ltd | Korean Food Distributors",
+  description: "Learn about Won Mart (Pvt) Ltd, Sri Lanka's sole authorized distributor of Nongshim Korean food products. Discover our history, mission, and commitment to authentic Korean cuisine.",
+  openGraph: {
+    title: "About Won Mart | Korean Food Distributors in Sri Lanka",
+    description: "The story behind Sri Lanka's premier Korean food distributor and our partnership with Nongshim Korea.",
+    url: '/about',
+  },
+};
 
 export default function AboutPage() {
   return (

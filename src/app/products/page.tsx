@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 "use client";
 
 import { useState } from "react";
@@ -17,6 +18,8 @@ interface Product {
   price: string;
   weight: string;
 }
+
+import type { Metadata } from "next";
 
 // Type for products data structure
 interface ProductsData {
