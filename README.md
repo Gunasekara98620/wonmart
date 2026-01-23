@@ -1,6 +1,17 @@
 # Won Mart (Pvt) Ltd - Nongshim Korea Food Products
 
-This is a [Next.js](https://nextjs.org/) project for Won Mart (Pvt) Ltd, the sole distributor in Sri Lanka of food products from Nongshim Korea.
+Won Mart (Pvt) Ltd is the sole authorized distributor of premium Nongshim Korea food products in Sri Lanka. Established with a passion for Korean cuisine, we bring authentic Korean flavors to Sri Lankan households through our carefully curated selection of high-quality products.
+
+## About Our Company
+
+- **Mission**: To provide Sri Lankan consumers with authentic, high-quality Korean food products while fostering cultural exchange through culinary experiences
+- **Vision**: To become the premier destination for Korean cuisine in Sri Lanka, recognized for our commitment to quality, authenticity, and exceptional customer service
+- **Partnership**: Exclusive partnership with Nongshim Korea, one of Korea's leading food companies established in 1965
+- **Product Range**: Specializing in authentic Korean instant noodles, snacks, and specialty items including iconic products like Shin Ramyun, Neoguri, and Chapagetti
+- **Market Reach**: Island-wide distribution across Sri Lanka with reliable delivery services
+- **Location**: 206, Rolawatta, Meegama, Dharga Town, Sri Lanka
+- **Contact**: +94 766262903 | info.wonm@gmail.com
+- **Core Values**: Quality Assurance, Authenticity, and Customer Satisfaction
 
 ## Features
 
